@@ -219,6 +219,8 @@ body {
   background-image: url(../img/About-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 11.625rem;
+  padding-bottom: 5.625rem;
 }
 
 .about-wrapper {
@@ -253,6 +255,11 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-top: 1.875rem;
+}
+
+.about-descr-image {
+  border-radius: 25px;
 }
 
 .about-descr-content-tilte {
