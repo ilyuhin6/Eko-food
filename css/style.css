@@ -209,3 +209,64 @@ body {
   font-weight: 900;
   color: var(--color-primary);
 }
+
+/* START Section About */
+.section-about {
+  margin-top: 11.875rem;
+}
+
+.about-bg {
+  background-image: url(../img/About-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-wrapper {
+  max-width: 43.875rem;
+  margin-left: auto; /* Забирает всё свободное пространство слева от элемента */
+  width: fit-content; /* ЗАвтоматически рассчитывает отступ, заполняя доступную область */
+}
+
+.about-title {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.about-descr {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.about-text {
+  margin-top: 0.9375rem;
+  font-family: var(--secondary-font);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #525c60;
+  line-height: 165%;
+}
+
+.about-descr-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-descr-content-tilte {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.link-primary {
+  margin-top: 1.4375rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--color-link-primary);
+  color: #fff;
+  padding: 28px 38px 28px 38px;
+  border-radius: 20px;
+}
