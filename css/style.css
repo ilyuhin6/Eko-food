@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Подключение шррифта woff2 */
+@font-face {
+  font-family: "rosa"; /* Названием шрифта может быть любое уникальное имя, только старайтесь избежать Comic Sans */
+  src: url("../Fonts/rosa-marena.woff2") format("woff2"); /* Наиболее предпочтительный формат */
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+/* Переменые цветов шаблона дизайна */
+:root {
+  /* Основные шрифты */
+  --custom-font: "rosa", cursive;
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+
+  /* Основные цвета */
+  --color-primary: #274c5b; /* Основной брендовый цвет */
+  --color-secondary: #7eb693; /* Вторичный цвет */
+  --color-accent: #6f73ee; /* Акцентный цвет для выделения */
+
+  /* Статусные цвета */
+  --color-success: #75d14a; /* Успех/подтверждение */
+  --color-error: #ee685f; /* Ошибка/предупреждение */
+
+  /* Нейтральные цвета */
+  --color-text-light: #ffffff; /* Светлый текст */
+  --color-text-dark: #274c5b; /* Темный текст (дублирует primary) */
+
+  /* Фоновые цвета */
+  --color-background-section-product: #7eb693; /* Фон секций лучшие предложения */
+  --color-background-section-legend: #fff4cd; /* Фон секций легенды */
+  --color-background-section-error: #bbc9c9; /* Фон страницы 404*/
+
+  /* Базовые цвета для ссылок */
+  --color-link-primary: #274c5b;
+  --color-link-secondary: #efd372;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+.container {
+  max-width: 89.375rem;
+  padding: 0 0.9375rem;
+  margin: 0 auto;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Start navbar */
+.navbar {
+  max-width: 101.875rem;
+  margin: 0 auto;
+  height: 13.25rem;
+  padding: 0 0.9375rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  gap: 2.5rem;
+  margin-left: 9.375rem;
+}
+
+.link-navbar {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.action-contact {
+  position: relative;
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0 2rem 0 5rem; /* Делаем отступ для псевдоэлемента */
+  min-height: 56px; /* Минимальная высота как у круга */
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+}
+
+.action-contact::before {
+  content: "";
+  position: absolute; /* Включаем позиционирование */
+  left: 0; /* Фиксируем положение слева */
+  top: 50%; /* Центрируем по вертикали */
+  transform: translateY(-50%); /* Точное выравнивание */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: block; /* Явно указываем отображение */
+}
+
+/* START haeder */
+.hero {
+  background-image: url(../img/header-Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15.4375rem;
+  padding-bottom: 18rem;
+}
+
+.hero-info {
+  max-width: 34rem;
+}
+
+.remark-title-header {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.header-title {
+  font-size: 4.375rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.link-secondary {
+  margin-top: 1.4375rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--color-link-secondary);
+  padding: 28px 38px 28px 38px;
+  border-radius: 20px;
+}
