@@ -88,12 +88,14 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .navbar-list {
   list-style: none;
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   gap: 2.5rem;
   margin-left: 9.375rem;
 }
@@ -170,4 +172,40 @@ body {
   background-color: var(--color-link-secondary);
   padding: 28px 38px 28px 38px;
   border-radius: 20px;
+}
+
+/* START Secton Promo */
+.promo-section {
+  margin-top: 9.625rem;
+}
+
+.promo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-promo {
+  position: relative;
+}
+
+.promo-descr-box {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 3.375rem;
+}
+
+.promo-title {
+  font-family: var(--custom-font);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.promo-text {
+  width: 277px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
 }
