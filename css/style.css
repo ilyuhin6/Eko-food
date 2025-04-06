@@ -277,3 +277,221 @@ body {
   padding: 28px 38px 28px 38px;
   border-radius: 20px;
 }
+
+/* START Secion Product */
+.section-product {
+  margin-top: 11rem;
+}
+.section-product-title {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.section-product-remark {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f8f8;
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 30px;
+}
+
+.badge-product {
+  font-size: 0.9375rem;
+  font-family: var(--secondary-font);
+  background-color: var(--color-primary);
+  padding: 5px 12px;
+  color: #fff;
+  width: 72px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-product-title {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  border-top: 1px solid #dedddd;
+  padding-top: 10px;
+}
+
+.link-product-page {
+  margin-top: 7.625rem !important;
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+}
+
+/* START Section Reviews */
+.reviews-bg {
+  margin-top: 14.1875rem;
+  background-image: url(../img/reviews/rewiews-bg.jpg);
+  background-repeat: no repeat;
+  background-size: cover;
+  padding-top: 10.25rem;
+  padding-bottom: 11.875rem;
+}
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-title {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.reviews-remark {
+  font-size: 3.125rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 3.75rem;
+}
+
+.reviews-avatar {
+  margin-bottom: 1.25rem;
+}
+
+.reviews-text {
+  max-width: 48.75rem;
+  font-family: var(--secondary-font);
+  font-size: 1.25rem;
+  color: #525c60;
+  margin-top: 1.5625rem;
+  text-align: center;
+}
+
+.rivews-usp-wrapper {
+  margin-top: 6.375rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 6.375rem;
+}
+
+.rivews-usp-wrapper .usp-reyting:nth-child(2) {
+  padding: 3.75rem 3.75rem 2.875rem 3.5rem;
+}
+
+.rivews-usp-wrapper .usp-reyting:nth-child(3) {
+  padding: 3.75rem 1.8125rem 3.75rem 1.8125rem;
+}
+
+.usp-reyting {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.75rem 2.5rem;
+  border-radius: 50%;
+  /* border: 3px solid var(--color-secondary); */
+  box-shadow: 0 0 0 6px white,
+    /* белая "тень-бордер" */ 0 0 0 10px var(--color-secondary); /* зеленая "тень-бордер" */
+}
+
+.usp-reyting-title {
+  font-size: 3.125rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.usp-reyting-text {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+}
+
+/* START Section Best-Offers */
+.best-offers-bg {
+  background-color: var(--color-background-section-product);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 12.5rem 0;
+}
+
+.best-offer-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+
+.best-offer-title {
+  color: #fff;
+  font-size: 3.125rem;
+  font-weight: 900;
+}
+
+/* START Section Eco-friendly */
+.eco-friendly-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.eco-friendly-content-legend {
+  position: absolute;
+  background-color: #fff;
+  padding-left: 6.25rem;
+  left: 56.25rem;
+  border-radius: 1.5625rem;
+  padding-top: 4.875rem;
+  padding-bottom: 6.75rem;
+}
+
+.eco-friendly-content-legend-title {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.eco-friendly-content-legend-title-remark {
+  font-size: 3.125rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 3.75rem;
+}
+
+.eco-friendly-content-box-title {
+  font-size: 1.5625rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.eco-friendly-content-box-text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  color: #525c60;
+  max-width: 40rem;
+  margin-bottom: 2.1875rem;
+  margin-top: 0.625rem;
+}
