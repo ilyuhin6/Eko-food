@@ -44,6 +44,13 @@ html {
   --color-link-secondary: #efd372;
 }
 
+input:focus,
+input:active,
+input:focus-visible {
+  outline: none; /* Убирает обводку */
+  box-shadow: none; /* На случай, если браузер использует тень */
+}
+
 h1,
 h2,
 h3,
@@ -113,30 +120,111 @@ body {
   gap: 1.25rem;
 }
 
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Сдвигаем контейнер вправо */
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1.125rem;
+  background: transparent;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  right: calc(100% + 0.625rem); /* Позиционируем слева от иконки */
+  top: 50%;
+  transform: translateY(-50%);
+  direction: rtl; /* Для правильного направления текста */
+}
+
+.search-input.active {
+  width: 10rem;
+  padding: 0.5rem 0;
+  opacity: 1;
+  border-bottom-color: #2a2a2a;
+}
+
+.action-search {
+  cursor: pointer;
+  transition: transform 0.3s;
+  order: 1; /* Иконка справа от инпута */
+}
+
+.action-search:hover {
+  transform: scale(1.05);
+}
+
+.contact-text {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .action-contact {
+  /* Ваши существующие стили */
   position: relative;
   color: var(--color-primary);
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  padding: 0 2rem 0 5rem; /* Делаем отступ для псевдоэлемента */
-  min-height: 56px; /* Минимальная высота как у круга */
+  padding: 0 2rem 0 5rem;
+  min-height: 56px;
   display: flex;
   align-items: center;
   border: 1px solid #e0e0e0;
   border-radius: 30px;
+  cursor: pointer; /* Добавляем курсор-указатель */
+  overflow: hidden; /* Скрываем выходящие за границы элементы */
+  transition: all 0.4s ease-in-out; /* Анимация для основного элемента */
 }
 
 .action-contact::before {
+  /* Ваши существующие стили */
   content: "";
-  position: absolute; /* Включаем позиционирование */
-  left: 0; /* Фиксируем положение слева */
-  top: 50%; /* Центрируем по вертикали */
-  transform: translateY(-50%); /* Точное выравнивание */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 56px;
   height: 56px;
   border-radius: 50%;
   background-color: var(--color-primary);
-  display: block; /* Явно указываем отображение */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Анимация для круга */
+}
+
+/* Добавляем текст телефона */
+.action-contact::after {
+  content: attr(data-phone);
+  position: absolute;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s 0.2s; /* Задержка для появления текста */
+}
+
+/* Активное состояние */
+.action-contact.active {
+  padding: 0 7rem 0 4rem; /* Меняем отступы местами */
+}
+
+.action-contact.active::before {
+  left: calc(100% - 56px); /* Сдвигаем круг вправо */
+}
+
+.action-contact.active::after {
+  opacity: 1; /* Показываем номер телефона */
+}
+
+/* Скрываем оригинальный текст при активном состоянии */
+.action-contact.active span {
+  opacity: 0;
 }
 
 /* START haeder */
@@ -572,6 +660,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .blog-post-content {
@@ -619,4 +708,81 @@ body {
   font-family: var(--secondary-font);
   color: #525c60;
   line-height: 165%;
+}
+
+/* START Footer */
+.footer {
+  margin-top: 13.75rem;
+  padding-bottom: 10.3125rem;
+}
+
+.footer-bg {
+  width: 100%;
+  background-image: url(../img/Footer/search-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 6.5625rem 4.5rem;
+}
+
+.footer-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-title-cta {
+  max-width: 28.375rem;
+  font-size: 3.125rem;
+  color: #fff;
+  font-weight: 900;
+}
+
+.form-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-cta-input {
+  padding: 1.6875rem 4.1875rem 1.9375rem 1.4375rem;
+  border: none;
+  border-radius: 1.125rem;
+  font-size: 18px;
+  color: #ababab;
+  font-style: italic;
+}
+
+.btn-cta {
+  border: none;
+  padding: 1.75rem 3rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 1.125rem;
+}
+
+/* START DISPLAY ADAPTIV */
+
+@media (max-width: 1390px) {
+  html {
+    font-size: 14px;
+  }
+  .blog-post-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input.active {
+    width: calc(100vw - 120px);
+    right: 0;
+  }
 }

@@ -33,8 +33,16 @@
             </li>
         </ul>
         <div class="navbar-actions">
-            <img src="./img/icon/Search_Icon.svg" alt="поиск" class="action-search" width="56" height="56">
-            <span class="action-contact">Контакты</span>
+            <!-- <img src="./img/icon/Search_Icon.svg" alt="поиск" class="action-search" width="56" height="56">
+            <span class="action-contact">Контакты</span> -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск..." aria-label="Поле поиска">
+                <img src="./img/icon/Search_Icon.svg" alt="Поиск" class="action-search" width="56" height="56"
+                    id="searchTrigger">
+            </div>
+            <span class="action-contact" data-phone="+7 (999) 123-45-67">
+                <span class="contact-text">Контакты</span>
+            </span>
         </div>
     </div>
 </nav>
@@ -349,7 +357,7 @@
                     <img src="./img/blog/Image2.png" alt="пост о витаминах" class="blog-post-content-image">
                     <span class="date-post">25 <br> Авг.</span>
                     <div class="blog-PostPreview">
-                        <h3 class="blog-post-title">Витаминная заправка для летнего салата</h3>
+                        <h3 class="blog-post-title">Каих витаминов не хватает осенью?</h3>
                         <p class="blog-post-text">Simply dummy text of the printing and typesetting industry. Lorem
                             Ipsum</p>
                         <a href="#" class="link link-secondary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка"
@@ -362,7 +370,21 @@
     </div>
 </section>
 
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bg">
+            <div class="footer-cta">
+                <h2 class="footer-title-cta">Узнайте первыми
+                    о новых акциях!</h2>
+                <form action="#" class="form-cta">
+                    <input type="text" name="email" placeholder="Введите ваш e-mail" class="form-cta-input">
+                    <button type="submit" class="btn btn-cta">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
+</footer>
 
 <body>
     <script src="./js/main.js"></script>
