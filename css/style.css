@@ -530,3 +530,93 @@ body {
   color: var(--color-primary);
   border-radius: 0.9375rem;
 }
+
+/* START Section Blog */
+.section-blog {
+  margin-top: 11.375rem;
+}
+
+.blog-action-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-action {
+  max-width: 43.875rem;
+}
+
+.section-blog-title {
+  font-family: var(--custom-font);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.section-blog-title-remark {
+  font-size: 3.125rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 3.75rem;
+}
+
+.section-blog-link {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 28px 38px 28px 38px;
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+}
+
+.blog-post-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-post-content {
+  position: relative;
+  max-width: 42.5rem;
+}
+
+.date-post {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.blog-PostPreview {
+  position: absolute;
+  max-width: 38.3125rem;
+  width: calc(100% - 40px); /* Запас для padding */
+  padding: 2.875rem 3.5625rem 3.75rem 3.5625rem;
+  border-radius: 3.125rem;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Для визуализации */
+}
+
+.blog-post-title {
+  font-size: 1.5625rem;
+  color: var(--color-link-primary);
+  font-weight: 900;
+}
+
+.blog-post-text {
+  font-size: 1.125rem;
+  font-family: var(--secondary-font);
+  color: #525c60;
+  line-height: 165%;
+}
