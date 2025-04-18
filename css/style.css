@@ -75,9 +75,16 @@ body {
 }
 
 .link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Start navbar */
@@ -111,6 +118,11 @@ body {
   color: var(--color-primary);
   font-size: 1.25rem;
   font-weight: bold;
+  transition: all 0.4s;
+}
+
+.link-navbar:hover {
+  color: var(--color-secondary);
 }
 
 .navbar-actions {
@@ -789,6 +801,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   border-radius: 1.125rem;
+  cursor: pointer;
 }
 
 .footer-menu-wrapper {
@@ -1009,5 +1022,48 @@ body {
   }
   .blog-post-content-image {
     width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    height: 25rem;
+  }
+  .navbar-list {
+    margin-left: -1.625rem;
+    margin-top: 2rem;
+  }
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .about-bg {
+    padding: 0;
+  }
+  .reviews-bg {
+    margin: 0;
+  }
+  .reviews-remark {
+    text-align: center;
+  }
+  .best-offers-bg {
+    padding: 4rem 0;
+  }
+  .best-offer-title {
+    text-align: center;
+  }
+  .ecof-friendly-image-left {
+    display: none;
+  }
+  .eco-friendly-content-legend {
+    position: relative;
+    width: 95%;
+    padding-bottom: 0;
+  }
+  .footer-title-cta {
+    text-align: center;
+  }
+  .date-post {
+    display: none;
   }
 }
