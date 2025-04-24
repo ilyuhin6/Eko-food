@@ -313,6 +313,17 @@ body {
   text-align: center;
 }
 
+.section-page-about {
+  margin-top: 13.0625rem;
+}
+
+.page-about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 .link-secondary {
   margin-top: 1.4375rem;
   font-size: 1.25rem;
@@ -984,6 +995,9 @@ body {
   .footer-bg {
     background-size: cover;
     border-radius: 0 25px 25px 0;
+  }
+  .page-about-img {
+    display: none;
   }
 }
 
