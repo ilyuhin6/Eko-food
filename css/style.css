@@ -265,6 +265,54 @@ body {
   color: var(--color-primary);
 }
 
+/* START Header-page */
+.header-page-about {
+  background-image: url("../img/header-page/about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-shop {
+  background-image: url("../img/header-page/shop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-shop-single {
+  background-image: url("../img/header-page/shop-single.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-blog {
+  background-image: url("../img/header-page/blog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-blog-single {
+  background-image: url("../img/header-page/blog-single.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-contact {
+  background-image: url("../img/header-page/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+.header-page-404 {
+  background-image: url("../img/header-page/404.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11.5rem 0;
+}
+
+.header-title-page {
+  text-align: center;
+}
+
 .link-secondary {
   margin-top: 1.4375rem;
   font-size: 1.25rem;
@@ -1023,6 +1071,9 @@ body {
   }
   .blog-post-content-image {
     width: 100%;
+  }
+  .header-page-bg {
+    margin-top: 2rem;
   }
 }
 

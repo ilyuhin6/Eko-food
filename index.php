@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.css">
@@ -18,10 +16,10 @@
 <!-- START navbar -->
 <nav class="navbar">
     <div class="navbar-wrapper">
-        <img src="./img/Logo.svg" alt="логотип" class="logo-img" width="244" height="74">
+        <a href="/"><img src="./img/Logo.svg" alt="логотип" class="logo-img" width="244" height="74"></a>
         <ul class="navbar-list">
             <li class="item-navbar">
-                <a href="#" class="link-navbar">О нас </a>
+                <a href="./about.php" class="link-navbar">О нас </a>
             </li>
             <li class="item-navbar">
                 <a href="#" class="link-navbar">Каталог</a>
@@ -41,8 +39,7 @@
             <span class="action-contact">Контакты</span> -->
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Поиск..." aria-label="Поле поиска">
-                <img src="./img/icon/Search_Icon.svg" alt="Поиск" class="action-search" width="56" height="56"
-                    id="searchTrigger">
+                <img src="./img/icon/Search_Icon.svg" alt="Поиск" class="action-search" width="56" height="56" id="searchTrigger">
             </div>
             <span class="action-contact" data-phone="+7 (999) 123-45-67">
                 <span class="contact-text">Контакты</span>
@@ -61,8 +58,7 @@
                 <h1 class="header-title">Масла и мука из фермерского
                     сырья
                 </h1>
-                <a href="#" class="link link-secondary">В Каталог <img src="./img/icon/Aerrow.svg" alt="стрелка"
-                        width="19" height="19">
+                <a href="#" class="link link-secondary">В Каталог <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19">
                 </a>
             </div>
         </div>
@@ -110,8 +106,7 @@
                     устойчивости цепочки поставок, обеспечивая надежность и прозрачность.
                 </p>
                 <div class="about-descr-wrapper">
-                    <img src="./img/icon/Icon-product.jpg" alt="продукция" width="101" height="101"
-                        class="about-descr-image">
+                    <img src="./img/icon/Icon-product.jpg" alt="продукция" width="101" height="101" class="about-descr-image">
 
                     <div class="about-descr-content">
                         <h3 class="about-descr-content-tilte">Только натуральная продукция</h3>
@@ -123,8 +118,7 @@
 
                 </div>
                 <div class="about-descr-wrapper">
-                    <img src="./img/icon/Icon-standart.jpg" alt="продукция" width="101" height="101"
-                        class="about-descr-image">
+                    <img src="./img/icon/Icon-standart.jpg" alt="продукция" width="101" height="101" class="about-descr-image">
 
                     <div class="about-descr-content">
                         <h3 class="about-descr-content-tilte">Высокие стандарты качества</h3>
@@ -135,8 +129,7 @@
                     </div>
 
                 </div>
-                <a href="#" class="link link-primary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка"
-                        width="19" height="19" /> </a>
+                <a href="#" class="link link-primary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19" /> </a>
             </div>
         </div>
     </div>
@@ -193,8 +186,7 @@
             </div>
         </div>
 
-        <a href="#" class="link link-primary link-product-page">Смотреть всё <img src="./img/icon/Aerrow.svg"
-                alt="смотреть все" width="19" height="19" /></a>
+        <a href="#" class="link link-primary link-product-page">Смотреть всё <img src="./img/icon/Aerrow.svg" alt="смотреть все" width="19" height="19" /></a>
 
     </div>
 
@@ -223,8 +215,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="reviews-slider-wrapper">
-                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115"
-                                    height="115">
+                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115" height="115">
                                 <span class="reviews-rayting">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
@@ -242,8 +233,7 @@
 
                         <div class="swiper-slide">
                             <div class="reviews-slider-wrapper">
-                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115"
-                                    height="115">
+                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115" height="115">
                                 <span class="reviews-rayting">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
@@ -261,8 +251,7 @@
 
                         <div class="swiper-slide">
                             <div class="reviews-slider-wrapper">
-                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115"
-                                    height="115">
+                                <img src="./img/reviews/avatar.jpg" alt="аватар" class="reviews-avatar" width="115" height="115">
                                 <span class="reviews-rayting">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
                                     <img src="./img/icon/Star 7.svg" alt="рейтинг" width="28" height="26.7">
@@ -314,8 +303,7 @@
         <div class="container">
             <div class="best-offer-action">
                 <h2 class="best-offer-title">Лучшие предложения месяца</h2>
-                <a href="#" class="link best-offer-link link-secondary">Смотреть все <img src="./img/icon/Aerrow.svg"
-                        alt="смотреть все" width="19" height="19" />
+                <a href="#" class="link best-offer-link link-secondary">Смотреть все <img src="./img/icon/Aerrow.svg" alt="смотреть все" width="19" height="19" />
                 </a>
             </div>
             <div class="product-wrapper">
@@ -349,8 +337,7 @@
 <section class="section section-eco-friendly">
     <div class="eco-friendly-content">
         <div class="eco-friendly-wrapper">
-            <img src="./img/friendly/friendly-imag.jpg" alt="Друзья фермеры" class="ecof-friendly-image-left"
-                width="952" height="931">
+            <img src="./img/friendly/friendly-imag.jpg" alt="Друзья фермеры" class="ecof-friendly-image-left" width="952" height="931">
             <div class="eco-friendly-content-legend">
                 <h2 class="eco-friendly-content-legend-title">Eco Friendly</h2>
                 <div class="eco-friendly-content-legend-title-remark">Создаём здоровое будущее </div>
@@ -405,8 +392,7 @@
                 <h2 class="section-blog-title">Новости</h2>
                 <p class="section-blog-title-remark">Новости об органических продуктах и многом другом</p>
             </div>
-            <a href="" class="link section-blog-link">Больше новостей <img src="./img/icon/Aerrow.svg" alt="иконка"
-                    width="19" height="19"></a>
+            <a href="" class="link section-blog-link">Больше новостей <img src="./img/icon/Aerrow.svg" alt="иконка" width="19" height="19"></a>
         </div>
         <div class="blog-content">
             <div class="blog-post-wrapper">
@@ -417,8 +403,7 @@
                         <h3 class="blog-post-title">Витаминная заправка для летнего салата</h3>
                         <p class="blog-post-text">Simply dummy text of the printing and typesetting industry. Lorem
                             Ipsum</p>
-                        <a href="#" class="link link-secondary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка"
-                                width="19" height="19"></a>
+                        <a href="#" class="link link-secondary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19"></a>
                     </div>
                 </div>
 
@@ -429,8 +414,7 @@
                         <h3 class="blog-post-title">Каих витаминов не хватает осенью?</h3>
                         <p class="blog-post-text">Simply dummy text of the printing and typesetting industry. Lorem
                             Ipsum</p>
-                        <a href="#" class="link link-secondary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка"
-                                width="19" height="19"></a>
+                        <a href="#" class="link link-secondary">Подробнее <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19"></a>
                     </div>
                 </div>
 
@@ -493,8 +477,7 @@
                         <div class="footer-social-icons">
                             <img src="./img/social/1.svg" alt="insta" class="footer-social-icon" width="60" height="60">
                             <img src="./img/social/2.svg" alt="fb" class="footer-social-icon" width="60" height="60">
-                            <img src="./img/social/3.svg" alt="telegramm" class="footer-social-icon" width="60"
-                                height="60">
+                            <img src="./img/social/3.svg" alt="telegramm" class="footer-social-icon" width="60" height="60">
                             <img src="./img/social/4.svg" alt="vk" class="footer-social-icon" width="60" height="60">
                         </div>
                     </div>
@@ -518,9 +501,9 @@
 
 </footer>
 
-<body>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
