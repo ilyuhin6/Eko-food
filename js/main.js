@@ -40,7 +40,7 @@ document.querySelector('.action-contact').addEventListener('click', function() {
 
 
 
-
+// Иницилизиурем слайдер на отзывы
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   pagination: {

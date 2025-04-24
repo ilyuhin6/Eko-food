@@ -395,6 +395,7 @@ body {
   font-size: 3.125rem;
   font-weight: 900;
   color: var(--color-primary);
+  margin-bottom: 2.5rem;
 }
 
 .product-wrapper {
