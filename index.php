@@ -54,11 +54,11 @@
     <div class="hero">
         <div class="container">
             <div class="hero-info">
-                <p class="remark-title-header">100% натурально</p>
-                <h1 class="header-title">Масла и мука из фермерского
-                    сырья
-                </h1>
-                <a href="#" class="link link-secondary">В Каталог <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19">
+                <p class="remark-title-header animate-item">100% натурально</p>
+                <h1 class="header-title animate-item">Масла и мука из фермерского сырья</h1>
+                <a href="#" class="link link-secondary animate-item">
+                    В Каталог
+                    <img src="./img/icon/Aerrow.svg" alt="стрелка" width="19" height="19">
                 </a>
             </div>
         </div>
