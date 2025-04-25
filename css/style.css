@@ -993,6 +993,22 @@ body {
 }
 
 /* START DISPLAY ADAPTIV */
+@media (max-width: 1580px) {
+  .about-features-image {
+    display: none;
+  }
+  .about-features-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1260px) {
+  .page-about-wrapper {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 1390px) {
   html {

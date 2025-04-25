@@ -92,7 +92,9 @@ include_once('./template-php/header-page.php');
 </section>
 
 
-
+<?php
+include_once('./template-php/best-offers.php');
+?>
 
 
 <?php
