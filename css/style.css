@@ -315,6 +315,7 @@ body {
 
 .section-page-about {
   margin-top: 13.0625rem;
+  padding-bottom: 10.75rem;
 }
 
 .page-about-wrapper {
@@ -333,6 +334,68 @@ body {
   border-radius: 20px;
 }
 
+.section-page-about-features {
+  padding: 11.875rem;
+  background-color: #f9f8f8;
+}
+
+.page-about-features-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.why-us {
+  margin-top: 1.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ececec;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding: 29px 30px 29px 27px;
+  border-radius: 50px;
+}
+
+.why-us-text {
+  padding-left: 5rem;
+  max-width: 31.375rem;
+  font-size: 1.125rem;
+}
+
+.why-us-card-box {
+  margin-top: 5.6875rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.why-us-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 257px;
+  padding: 3.125rem 1.875rem;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.why-us-card-title {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin: 15px 0;
+}
+
+.why-us-card-text {
+  font-family: var(--secondary-font);
+  font-size: 1.125rem;
+  text-align: center;
+  color: #525c60;
+  line-height: 165%;
+}
 /* START Secton Promo */
 .promo-section {
   margin-top: 9.625rem;

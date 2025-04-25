@@ -49,6 +49,48 @@ include_once('./template-php/header-page.php');
   </div>
 </section>
 
+<section class="section-page-about-features">
+  <div class="container">
+    <div class="page-about-features-wrapper">
+      <div class="about-features-content">
+        <h2 class="about-title">Почему мы?</h2>
+        <p class="about-descr">
+          Мы закупаем семена и орехи у лучших фермеров.
+        </p>
+        <p class="about-text">
+          Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard the 1500s, when an unknown
+        </p>
+        <span class="why-us"><img src="./img/about/Icon.svg" alt="icon" width="19" height="19">100% Натуральные продукты</span>
+        <p class="about-text why-us-text">
+          Simply dummy text of the printing and typesetting industry Lorem Ipsum
+        </p>
+        <span class="why-us"><img src="./img/about/Icon.svg" alt="icon" width="19" height="19">Сертификаты качества и соответсвия</span>
+        <p class="about-text why-us-text">
+          Filling, and temptingly healthy, our Biona Organic Granola with Wild Berries is just the thing
+        </p>
+      </div>
+      <img src="./img/about/legend-Image.jpg" alt="полезная еда" class="about-features-image">
+    </div>
+
+    <div class="why-us-card-box">
+      <div class="why-us-card">
+        <img src="./img/about/bascet.svg" alt="корзина" width="95" height="95">
+        <h3 class="why-us-card-title">Доступность</h3>
+        <p class="why-us-card-text">Наша продукция во всех гипермаркетах</p>
+      </div>
+      <div class="why-us-card"><img src="./img/about/bascet.svg" alt="корзина" width="95" height="95">
+        <h3 class="why-us-card-title">Доступность</h3>
+        <p class="why-us-card-text">Наша продукция во всех гипермаркетах</p>
+      </div>
+      <div class="why-us-card"><img src="./img/about/bascet.svg" alt="корзина" width="95" height="95">
+        <h3 class="why-us-card-title">Доступность</h3>
+        <p class="why-us-card-text">Наша продукция во всех гипермаркетах</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 
