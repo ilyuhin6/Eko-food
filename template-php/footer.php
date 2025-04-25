@@ -2,13 +2,15 @@
   <div class="container">
     <div class="footer-bg">
       <div class="footer-cta">
-        <h2 class="footer-title-cta">Узнайте первыми
-          о новых акциях!</h2>
-        <form action="#" class="form-cta">
-          <input type="text" name="email" placeholder="Введите ваш e-mail" class="form-cta-input">
+        <h2>Узнайте первыми о новых акциях!</h2>
+        <form action="./subscribe.php" method="POST" class="form-cta">
+          <input type="email" name="email" placeholder="Введите e-mail" required class="form-cta-input">
           <button type="submit" class="btn btn-cta">Подписаться</button>
         </form>
       </div>
+
+      <!-- Подключим модальное окно -->
+      <?php include './includes/modal.php'; ?>
     </div>
 
 

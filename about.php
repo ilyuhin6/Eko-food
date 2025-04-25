@@ -7,7 +7,9 @@ include_once('./template-php/navbar.php');
 <?php
 include_once('./template-php/header-page.php');
 ?>
-
+<?php if (isset($_GET['error'])) : ?>
+  <div class="error"><?= htmlspecialchars($_GET['error']) ?></div>
+<?php endif; ?>
 
 <section class="section-page-about">
   <div class="container">
