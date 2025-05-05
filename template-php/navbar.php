@@ -22,7 +22,7 @@
         <a href="../about.php" class="link-navbar">О нас </a>
       </li>
       <li class="item-navbar">
-        <a href="#" class="link-navbar">Каталог</a>
+        <a href="../catalog.php" class="link-navbar">Каталог</a>
       </li>
       <li class="item-navbar">
         <a href="#" class="link-navbar">Диллерам</a>

@@ -1,7 +1,5 @@
 <?php if (isset($_GET['subscribed'])) : ?>
-  <style>
 
-  </style>
 
   <div class="modal" id="thankyouModal">
     <div class="modal-content">
