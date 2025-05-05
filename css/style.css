@@ -594,6 +594,10 @@ body {
   border-radius: 1.875rem;
 }
 
+.product-card:hover {
+  background-color: var(--color-link-secondary);
+}
+
 .badge-product {
   font-size: 0.9375rem;
   font-family: var(--secondary-font);
@@ -661,7 +665,7 @@ body {
 }
 
 /* START SLIDER */
-.swiper {
+.mySwiper {
   max-width: 70%;
   /* height: 100%; */
   padding-bottom: 3.125rem !important;
