@@ -44,7 +44,6 @@ include_once('./template-php/header-page.php');
   .product-card-shop {
     background-color: #f9f8f8;
     padding: 2.5rem 1rem 2.5rem 1rem;
-
   }
 
   .mySwiper3 {

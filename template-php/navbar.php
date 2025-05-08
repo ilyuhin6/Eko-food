@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/swiper-bundle.css">
-  <title>Belalea - Экологические продукты</title>
+  <title>Belalea - Экологические продукты | <?= $page_title; ?></title>
 </head>
 
 <!-- START navbar -->
@@ -25,10 +25,10 @@
         <a href="../catalog.php" class="link-navbar">Каталог</a>
       </li>
       <li class="item-navbar">
-        <a href="#" class="link-navbar">Диллерам</a>
+        <a href="../contact.php" class="link-navbar">Диллерам</a>
       </li>
       <li class="item-navbar">
-        <a href="#" class="link-navbar">Новости</a>
+        <a href="../blog.php" class="link-navbar">Новости</a>
       </li>
       <li class="item-navbar">
         <a href="#" class="link-navbar">Вход</a>

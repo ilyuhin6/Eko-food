@@ -87,6 +87,71 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* START Section-Contact */
+.section-contact {
+  margin-top: 13.0625rem;
+}
+
+.container-contact {
+  max-width: 87.5rem;
+  margin: 0 auto;
+}
+
+.page-about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.page-aboute-descr-wrapper {
+  flex-direction: column;
+}
+
+.section-address {
+  margin-top: 5.5625rem;
+}
+
+.address-box-bg {
+  background-image: url("../img/contact/address-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 7.625rem;
+  padding-bottom: 13.3125rem;
+  padding-right: 6.75rem;
+}
+
+.address-box-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.address-box {
+  width: 32.125rem;
+  background-color: #fff;
+  padding: 2.875rem 3.3125rem;
+  border-radius: 20px;
+}
+
+.address-title {
+  font-family: var(--custom-font);
+  font-size: 4.3rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.address-remark {
+  font-size: 3.125rem;
+  font-weight: 600;
+  color: var(--color-link-primary);
+  margin-top: 1rem;
+}
+
+.footer-social-company-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.125rem;
+}
+
 /* Start navbar */
 .navbar {
   max-width: 101.875rem;
@@ -885,7 +950,6 @@ body {
 .blog-post-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1314,5 +1378,8 @@ body {
   }
   .date-post {
     display: none;
+  }
+  .section-page-about-features {
+    padding: 0;
   }
 }
