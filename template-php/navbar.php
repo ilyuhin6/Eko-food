@@ -31,7 +31,7 @@
         <a href="../blog.php" class="link-navbar">Новости</a>
       </li>
       <li class="item-navbar">
-        <a href="#" class="link-navbar">Вход</a>
+        <a href="../enter.php" class="link-navbar">Вход</a>
       </li>
     </ul>
     <div class="navbar-actions">
