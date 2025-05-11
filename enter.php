@@ -1,35 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$page_title = 'О нас';
+$page_header_bg = 'header-page-about';
+include_once('./template-php/navbar.php');
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login/Signup Form</title>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    list-style: none;
-  }
-
-  body {
+  .enter-form-bg {
+    /* background-color: #7eb693; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
   }
 
-  .container {
+  .auth {
     position: relative;
     width: 850px;
     height: 550px;
@@ -40,21 +26,22 @@
     overflow: hidden;
   }
 
-  .container h1 {
+  .auth__title {
     font-size: 36px;
     margin: -10px 0;
+    color: #274c5b;
   }
 
-  .container p {
+  .auth__text {
     font-size: 14.5px;
     margin: 15px 0;
   }
 
-  form {
+  .auth__form {
     width: 100%;
   }
 
-  .form-box {
+  .auth__form-container {
     position: absolute;
     right: 0;
     width: 50%;
@@ -69,24 +56,24 @@
     transition: .6s ease-in-out 1.2s, visibility 0s 1s;
   }
 
-  .container.active .form-box {
+  .auth--active .auth__form-container {
     right: 50%;
   }
 
-  .form-box.register {
+  .auth__form-container--register {
     visibility: hidden;
   }
 
-  .container.active .form-box.register {
+  .auth--active .auth__form-container--register {
     visibility: visible;
   }
 
-  .input-box {
+  .auth__input-group {
     position: relative;
     margin: 30px 0;
   }
 
-  .input-box input {
+  .auth__input {
     width: 100%;
     padding: 13px 50px 13px 20px;
     background: #eee;
@@ -98,12 +85,12 @@
     font-weight: 500;
   }
 
-  .input-box input::placeholder {
+  .auth__input::placeholder {
     color: #888;
     font-weight: 400;
   }
 
-  .input-box i {
+  .auth__input-icon {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -111,19 +98,19 @@
     font-size: 20px;
   }
 
-  .forgot-link {
+  .auth__forgot-link {
     margin: -15px 0 15px;
   }
 
-  .forgot-link a {
+  .auth__forgot-link a {
     font-size: 14.5px;
     color: #333;
   }
 
-  .btn {
+  .auth__btn {
     width: 100%;
     height: 48px;
-    background: #7494ec;
+    background: #274c5b;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border: none;
@@ -133,12 +120,12 @@
     font-weight: 600;
   }
 
-  .social-icons {
+  .auth__social {
     display: flex;
     justify-content: center;
   }
 
-  .social-icons a {
+  .auth__social-link {
     display: inline-flex;
     padding: 10px;
     border: 2px solid #ccc;
@@ -148,34 +135,32 @@
     margin: 0 8px;
   }
 
-  .toggle-box {
+  .auth__toggle-container {
     position: absolute;
     width: 100%;
     height: 100%;
   }
 
-  .toggle-box::before {
+  .auth__toggle-container::before {
     content: '';
     position: absolute;
     left: -250%;
     width: 300%;
     height: 100%;
-    background: #7494ec;
-    /* border: 2px solid red; */
+    background: #7eb693;
     border-radius: 150px;
     z-index: 2;
     transition: 1.8s ease-in-out;
   }
 
-  .container.active .toggle-box::before {
+  .auth--active .auth__toggle-container::before {
     left: 50%;
   }
 
-  .toggle-panel {
+  .auth__toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: seagreen; */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -185,31 +170,31 @@
     transition: .6s ease-in-out;
   }
 
-  .toggle-panel.toggle-left {
+  .auth__toggle-panel--left {
     left: 0;
     transition-delay: 1.2s;
   }
 
-  .container.active .toggle-panel.toggle-left {
+  .auth--active .auth__toggle-panel--left {
     left: -50%;
     transition-delay: .6s;
   }
 
-  .toggle-panel.toggle-right {
+  .auth__toggle-panel--right {
     right: -50%;
     transition-delay: .6s;
   }
 
-  .container.active .toggle-panel.toggle-right {
+  .auth--active .auth__toggle-panel--right {
     right: 0;
     transition-delay: 1.2s;
   }
 
-  .toggle-panel p {
+  .auth__toggle-text {
     margin-bottom: 20px;
   }
 
-  .toggle-panel .btn {
+  .auth__toggle-btn {
     width: 160px;
     height: 46px;
     background: transparent;
@@ -218,22 +203,22 @@
   }
 
   @media screen and (max-width: 650px) {
-    .container {
+    .auth {
       height: calc(100vh - 40px);
     }
 
-    .form-box {
+    .auth__form-container {
       bottom: 0;
       width: 100%;
       height: 70%;
     }
 
-    .container.active .form-box {
+    .auth--active .auth__form-container {
       right: 0;
       bottom: 30%;
     }
 
-    .toggle-box::before {
+    .auth__toggle-container::before {
       left: 0;
       top: -270%;
       width: 100%;
@@ -241,124 +226,134 @@
       border-radius: 20vw;
     }
 
-    .container.active .toggle-box::before {
+    .auth--active .auth__toggle-container::before {
       left: 0;
       top: 70%;
     }
 
-    .container.active .toggle-panel.toggle-left {
+    .auth--active .auth__toggle-panel--left {
       left: 0;
       top: -30%;
     }
 
-    .toggle-panel {
+    .auth__toggle-panel {
       width: 100%;
       height: 30%;
     }
 
-    .toggle-panel.toggle-left {
+    .auth__toggle-panel--left {
       top: 0;
     }
 
-    .toggle-panel.toggle-right {
+    .auth__toggle-panel--right {
       right: 0;
       bottom: -30%;
     }
 
-    .container.active .toggle-panel.toggle-right {
+    .auth--active .auth__toggle-panel--right {
       bottom: 0;
     }
   }
 
   @media screen and (max-width: 400px) {
-    .form-box {
+    .auth__form-container {
       padding: 20px;
     }
 
-    .toggle-panel h1 {
+    .auth__toggle-title {
       font-size: 30px;
     }
   }
 </style>
 
-<body>
+
+<section class="section section-enter-form">
   <div class="container">
-    <div class="form-box login">
-      <form action="#">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <i class='bx bxs-user'></i>
+    <div class="enter-form-bg">
+      <div class="auth">
+        <div class="auth__form-container auth__form-container--login">
+          <form class="auth__form" action="#">
+            <h1 class="auth__title">Login</h1>
+            <div class="auth__input-group">
+              <input class="auth__input" type="text" placeholder="Username" required>
+              <i class="auth__input-icon bx bxs-user"></i>
+            </div>
+            <div class="auth__input-group">
+              <input class="auth__input" type="password" placeholder="Password" required>
+              <i class="auth__input-icon bx bxs-lock-alt"></i>
+            </div>
+            <div class="auth__forgot-link">
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="auth__btn">Login</button>
+            <p class="auth__text">or login with social platforms</p>
+            <div class="auth__social">
+              <a class="auth__social-link" href="#"><i class="bx bxl-google"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-facebook"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-github"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </form>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <div class="forgot-link">
-          <a href="#">Forgot Password?</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <p>or login with social platforms</p>
-        <div class="social-icons">
-          <a href="#"><i class='bx bxl-google'></i></a>
-          <a href="#"><i class='bx bxl-facebook'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
-        </div>
-      </form>
-    </div>
 
-    <div class="form-box register">
-      <form action="#">
-        <h1>Registration</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <i class='bx bxs-user'></i>
+        <div class="auth__form-container auth__form-container--register">
+          <form class="auth__form" action="#">
+            <h1 class="auth__title">Registration</h1>
+            <div class="auth__input-group">
+              <input class="auth__input" type="text" placeholder="Username" required>
+              <i class="auth__input-icon bx bxs-user"></i>
+            </div>
+            <div class="auth__input-group">
+              <input class="auth__input" type="email" placeholder="Email" required>
+              <i class="auth__input-icon bx bxs-envelope"></i>
+            </div>
+            <div class="auth__input-group">
+              <input class="auth__input" type="password" placeholder="Password" required>
+              <i class="auth__input-icon bx bxs-lock-alt"></i>
+            </div>
+            <button type="submit" class="auth__btn">Register</button>
+            <p class="auth__text">or register with social platforms</p>
+            <div class="auth__social">
+              <a class="auth__social-link" href="#"><i class="bx bxl-google"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-facebook"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-github"></i></a>
+              <a class="auth__social-link" href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </form>
         </div>
-        <div class="input-box">
-          <input type="email" placeholder="Email" required>
-          <i class='bx bxs-envelope'></i>
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <button type="submit" class="btn">Register</button>
-        <p>or register with social platforms</p>
-        <div class="social-icons">
-          <a href="#"><i class='bx bxl-google'></i></a>
-          <a href="#"><i class='bx bxl-facebook'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
-        </div>
-      </form>
-    </div>
 
-    <div class="toggle-box">
-      <div class="toggle-panel toggle-left">
-        <h1>Hello, Welcome!</h1>
-        <p>Don't have an account?</p>
-        <button class="btn register-btn">Register</button>
-      </div>
+        <div class="auth__toggle-container">
+          <div class="auth__toggle-panel auth__toggle-panel--left">
+            <h1 class="auth__toggle-title">Hello, Welcome!</h1>
+            <p class="auth__toggle-text">Don't have an account?</p>
+            <button class="auth__btn auth__toggle-btn auth__register-btn">Register</button>
+          </div>
 
-      <div class="toggle-panel toggle-right">
-        <h1>Welcome Back!</h1>
-        <p>Already have an account?</p>
-        <button class="btn login-btn">Login</button>
+          <div class="auth__toggle-panel auth__toggle-panel--right">
+            <h1 class="auth__toggle-title">Welcome Back!</h1>
+            <p class="auth__toggle-text">Already have an account?</p>
+            <button class="auth__btn auth__toggle-btn auth__login-btn">Login</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <script>
-    const container = document.querySelector('.container');
-    const registerBtn = document.querySelector('.register-btn');
-    const loginBtn = document.querySelector('.login-btn');
+<script>
+  const authContainer = document.querySelector('.auth');
+  const registerBtn = document.querySelector('.auth__register-btn');
+  const loginBtn = document.querySelector('.auth__login-btn');
 
-    registerBtn.addEventListener('click', () => {
-      container.classList.add('active');
-    })
+  registerBtn.addEventListener('click', () => {
+    authContainer.classList.add('auth--active');
+  })
 
-    loginBtn.addEventListener('click', () => {
-      container.classList.remove('active');
-    })
-  </script>
+  loginBtn.addEventListener('click', () => {
+    authContainer.classList.remove('auth--active');
+  })
+</script>
+
+<?php
+include_once('./template-php/footer.php');
+?>
