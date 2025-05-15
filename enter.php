@@ -267,72 +267,79 @@ include_once('./template-php/navbar.php');
 </style>
 
 
+<?php
+session_start();
+$errors = $_SESSION['auth_errors'] ?? [];
+$form_data = $_SESSION['auth_data'] ?? [];
+unset($_SESSION['auth_errors']);
+unset($_SESSION['auth_data']);
+
+if (!empty($errors)) {
+  echo '<div class="auth__errors">';
+  foreach ($errors as $error) {
+    echo '<p class="auth__error">' . htmlspecialchars($error) . '</p>';
+  }
+  echo '</div>';
+}
+?>
+
+
+
 <section class="section section-enter-form">
   <div class="container">
     <div class="enter-form-bg">
       <div class="auth">
         <div class="auth__form-container auth__form-container--login">
-          <form class="auth__form" action="#">
-            <h1 class="auth__title">Login</h1>
+
+
+
+          <form class="auth__form" action="./includes/avtoriz.php" method="post">
+            <h1 class="auth__title">Авторизация</h1>
             <div class="auth__input-group">
-              <input class="auth__input" type="text" placeholder="Username" required>
+              <input class="auth__input" name="userName" type="text" placeholder="Имя" value="<?php echo isset($form_data['userName']) ? htmlspecialchars($form_data['userName']) : ''; ?>">>
               <i class="auth__input-icon bx bxs-user"></i>
             </div>
             <div class="auth__input-group">
-              <input class="auth__input" type="password" placeholder="Password" required>
+              <input class="auth__input" name="userPass" type="password" placeholder="Пароль" required>
               <i class="auth__input-icon bx bxs-lock-alt"></i>
             </div>
             <div class="auth__forgot-link">
-              <a href="#">Forgot Password?</a>
+              <a href="#">Забыли пароль?</a>
             </div>
-            <button type="submit" class="auth__btn">Login</button>
-            <p class="auth__text">or login with social platforms</p>
-            <div class="auth__social">
-              <a class="auth__social-link" href="#"><i class="bx bxl-google"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-facebook"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-github"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-linkedin"></i></a>
-            </div>
+            <button type="submit" class="auth__btn">Войти</button>
           </form>
         </div>
 
         <div class="auth__form-container auth__form-container--register">
-          <form class="auth__form" action="#">
-            <h1 class="auth__title">Registration</h1>
+          <form class="auth__form" action="./includes/registration.php" method="post">
+            <h1 class="auth__title">Регистрация</h1>
             <div class="auth__input-group">
-              <input class="auth__input" type="text" placeholder="Username" required>
+              <input class="auth__input" name="userName" type="text" placeholder="Имя" required>
               <i class="auth__input-icon bx bxs-user"></i>
             </div>
             <div class="auth__input-group">
-              <input class="auth__input" type="email" placeholder="Email" required>
+              <input class="auth__input" name="userPass" type="password" placeholder="Пароль" required>
               <i class="auth__input-icon bx bxs-envelope"></i>
             </div>
             <div class="auth__input-group">
-              <input class="auth__input" type="password" placeholder="Password" required>
+              <input class="auth__input" name="userPassVerif" type="password" placeholder="Подтвердите пароль" required>
               <i class="auth__input-icon bx bxs-lock-alt"></i>
             </div>
-            <button type="submit" class="auth__btn">Register</button>
-            <p class="auth__text">or register with social platforms</p>
-            <div class="auth__social">
-              <a class="auth__social-link" href="#"><i class="bx bxl-google"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-facebook"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-github"></i></a>
-              <a class="auth__social-link" href="#"><i class="bx bxl-linkedin"></i></a>
-            </div>
+            <button type="submit" class="auth__btn">Зарегистрироваться</button>
           </form>
         </div>
 
         <div class="auth__toggle-container">
           <div class="auth__toggle-panel auth__toggle-panel--left">
-            <h1 class="auth__toggle-title">Hello, Welcome!</h1>
-            <p class="auth__toggle-text">Don't have an account?</p>
-            <button class="auth__btn auth__toggle-btn auth__register-btn">Register</button>
+            <h1 class="auth__toggle-title">Добро пожаловать!</h1>
+            <p class="auth__toggle-text">Еще нет аккаунта?</p>
+            <button class="auth__btn auth__toggle-btn auth__register-btn">Регистрация</button>
           </div>
 
           <div class="auth__toggle-panel auth__toggle-panel--right">
-            <h1 class="auth__toggle-title">Welcome Back!</h1>
-            <p class="auth__toggle-text">Already have an account?</p>
-            <button class="auth__btn auth__toggle-btn auth__login-btn">Login</button>
+            <h1 class="auth__toggle-title">Добро пожаловть!</h1>
+            <p class="auth__toggle-text">Уже есть аккаунт?</p>
+            <button class="auth__btn auth__toggle-btn auth__login-btn">Войти</button>
           </div>
         </div>
       </div>
