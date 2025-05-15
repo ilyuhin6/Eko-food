@@ -267,21 +267,7 @@ include_once('./template-php/navbar.php');
 </style>
 
 
-<?php
-session_start();
-$errors = $_SESSION['auth_errors'] ?? [];
-$form_data = $_SESSION['auth_data'] ?? [];
-unset($_SESSION['auth_errors']);
-unset($_SESSION['auth_data']);
 
-if (!empty($errors)) {
-  echo '<div class="auth__errors">';
-  foreach ($errors as $error) {
-    echo '<p class="auth__error">' . htmlspecialchars($error) . '</p>';
-  }
-  echo '</div>';
-}
-?>
 
 
 
